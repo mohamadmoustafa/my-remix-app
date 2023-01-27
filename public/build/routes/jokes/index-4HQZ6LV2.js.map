@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/jokes/index.tsx"],
+  "sourcesContent": ["export default function JokesIndexRoute() {\r\n  return (\r\n    <div>\r\n      <p>Here's a random joke:</p>\r\n      <p>I was wondering why the frisbee was getting bigger, then it hit me.</p>\r\n    </div>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;AAGM;AAHS,SAAR,kBAAmC;AACxC,SACE,mDAAC,SACC;AAAA,uDAAC,OAAE,qCAAH;AAAA;AAAA;AAAA;AAAA,WAAwB;AAAA,IACxB,mDAAC,OAAE,mFAAH;AAAA;AAAA;AAAA;AAAA,WAAsE;AAAA,OAFxE;AAAA;AAAA;AAAA;AAAA,SAGA;AAEJ;",
+  "names": []
+}

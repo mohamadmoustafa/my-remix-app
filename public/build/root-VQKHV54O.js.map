@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../app/root.tsx"],
+  "sourcesContent": ["import { LiveReload } from \"@remix-run/react\";\r\n\r\nexport default function App() {\r\n  return (\r\n    <html lang=\"en\">\r\n      <head>\r\n        <meta charSet=\"utf-8\" />\r\n        <title>Remix: So great, it's funny!</title>\r\n      </head>\r\n      <body>\r\n        Hello world\r\n        <LiveReload />\r\n      </body>\r\n    </html>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;AAMQ;AAJO,SAAR,MAAuB;AAC5B,SACE,mDAAC,UAAK,MAAK,MACT;AAAA,uDAAC,UACC;AAAA,yDAAC,UAAK,SAAQ,WAAd;AAAA;AAAA;AAAA;AAAA,aAAsB;AAAA,MACtB,mDAAC,WAAM,4CAAP;AAAA;AAAA;AAAA;AAAA,aAAmC;AAAA,SAFrC;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,IACA,mDAAC,UAAK;AAAA;AAAA,MAEJ,mDAAC,gBAAD;AAAA;AAAA;AAAA;AAAA,aAAY;AAAA,SAFd;AAAA;AAAA;AAAA;AAAA,WAGA;AAAA,OARF;AAAA;AAAA;AAAA;AAAA,SASA;AAEJ;",
+  "names": []
+}

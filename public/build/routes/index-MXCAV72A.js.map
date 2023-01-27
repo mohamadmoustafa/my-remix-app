@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/index.tsx"],
+  "sourcesContent": ["export default function Hello() {\r\n  return <p>Hello Index Route</p>;\r\n}\r\n"],
+  "mappings": ";;;;;;AACS;AADM,SAAR,QAAyB;AAC9B,SAAO,mDAAC,OAAE,iCAAH;AAAA;AAAA;AAAA;AAAA,SAAoB;AAC7B;",
+  "names": []
+}

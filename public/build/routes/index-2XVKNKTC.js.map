@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/index.tsx"],
+  "sourcesContent": ["export default function IndexRoute() {\r\n  return <div>Hello Index Route</div>;\r\n}\r\n"],
+  "mappings": ";;;;;;AACS;AADM,SAAR,aAA8B;AACnC,SAAO,mDAAC,SAAI,iCAAL;AAAA;AAAA;AAAA;AAAA,SAAsB;AAC/B;",
+  "names": []
+}

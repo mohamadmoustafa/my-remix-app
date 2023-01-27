@@ -34,7 +34,7 @@ var entry_server_exports = {};
 __export(entry_server_exports, {
   default: () => handleRequest
 });
-var import_stream = require("stream"), import_node = require("@remix-run/node"), import_react = require("@remix-run/react"), import_isbot = __toESM(require("isbot")), import_server = require("react-dom/server"), import_jsx_runtime = require("react/jsx-runtime"), ABORT_DELAY = 5e3;
+var import_stream = require("stream"), import_node = require("@remix-run/node"), import_react = require("@remix-run/react"), import_isbot = __toESM(require("isbot")), import_server = require("react-dom/server"), import_jsx_dev_runtime = require("react/jsx-dev-runtime"), ABORT_DELAY = 5e3;
 function handleRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return (0, import_isbot.default)(request.headers.get("user-agent")) ? handleBotRequest(
     request,
@@ -51,7 +51,11 @@ function handleRequest(request, responseStatusCode, responseHeaders, remixContex
 function handleBotRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return new Promise((resolve, reject) => {
     let didError = !1, { pipe, abort } = (0, import_server.renderToPipeableStream)(
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.RemixServer, { context: remixContext, url: request.url }),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react.RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
+        fileName: "app/entry.server.tsx",
+        lineNumber: 41,
+        columnNumber: 7
+      }, this),
       {
         onAllReady() {
           let body = new import_stream.PassThrough();
@@ -76,7 +80,11 @@ function handleBotRequest(request, responseStatusCode, responseHeaders, remixCon
 function handleBrowserRequest(request, responseStatusCode, responseHeaders, remixContext) {
   return new Promise((resolve, reject) => {
     let didError = !1, { pipe, abort } = (0, import_server.renderToPipeableStream)(
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(import_react.RemixServer, { context: remixContext, url: request.url }),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime.jsxDEV)(import_react.RemixServer, { context: remixContext, url: request.url }, void 0, !1, {
+        fileName: "app/entry.server.tsx",
+        lineNumber: 82,
+        columnNumber: 7
+      }, this),
       {
         onShellReady() {
           let body = new import_stream.PassThrough();
@@ -102,64 +110,187 @@ function handleBrowserRequest(request, responseStatusCode, responseHeaders, remi
 // app/root.tsx
 var root_exports = {};
 __export(root_exports, {
-  default: () => App,
-  meta: () => meta
+  default: () => App
 });
-var import_react2 = require("@remix-run/react"), import_jsx_runtime2 = require("react/jsx-runtime"), meta = () => ({
-  charset: "utf-8",
-  title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1"
-});
+var import_react2 = require("@remix-run/react"), import_jsx_dev_runtime2 = require("react/jsx-dev-runtime");
 function App() {
-  return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("html", { lang: "en", children: [
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("head", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Meta, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Links, {})
-    ] }),
-    /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("body", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Outlet, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.ScrollRestoration, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.Scripts, {}),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_react2.LiveReload, {})
-    ] })
-  ] });
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("html", { lang: "en", children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("head", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("meta", { charSet: "utf-8" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 7,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("title", { children: "Remix: So great, it's funny!" }, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 8,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 6,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("body", { children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.Outlet, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 11,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)(import_react2.LiveReload, {}, void 0, !1, {
+        fileName: "app/root.tsx",
+        lineNumber: 12,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/root.tsx",
+      lineNumber: 10,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/root.tsx",
+    lineNumber: 5,
+    columnNumber: 5
+  }, this);
 }
 
 // app/routes/index.tsx
 var routes_exports = {};
 __export(routes_exports, {
-  default: () => Index
+  default: () => IndexRoute
 });
-var import_jsx_runtime3 = require("react/jsx-runtime");
-function Index() {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { style: { fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }, children: [
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Welcome to Remix" }),
-    /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("ul", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-        "a",
-        {
-          target: "_blank",
-          href: "https://remix.run/tutorials/blog",
-          rel: "noreferrer",
-          children: "15m Quickstart Blog Tutorial"
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
-        "a",
-        {
-          target: "_blank",
-          href: "https://remix.run/tutorials/jokes",
-          rel: "noreferrer",
-          children: "Deep Dive Jokes App Tutorial"
-        }
-      ) }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { target: "_blank", href: "https://remix.run/docs", rel: "noreferrer", children: "Remix Docs" }) })
-    ] })
-  ] });
+var import_jsx_dev_runtime3 = require("react/jsx-dev-runtime");
+function IndexRoute() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime3.jsxDEV)("div", { children: "Hello Index Route" }, void 0, !1, {
+    fileName: "app/routes/index.tsx",
+    lineNumber: 2,
+    columnNumber: 10
+  }, this);
+}
+
+// app/routes/jokes.tsx
+var jokes_exports = {};
+__export(jokes_exports, {
+  default: () => JokesRoute
+});
+var import_react3 = require("@remix-run/react"), import_jsx_dev_runtime4 = require("react/jsx-dev-runtime");
+function JokesRoute() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("h1", { children: "J\u{1F92A}KES" }, void 0, !1, {
+      fileName: "app/routes/jokes.tsx",
+      lineNumber: 6,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)("main", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime4.jsxDEV)(import_react3.Outlet, {}, void 0, !1, {
+      fileName: "app/routes/jokes.tsx",
+      lineNumber: 8,
+      columnNumber: 9
+    }, this) }, void 0, !1, {
+      fileName: "app/routes/jokes.tsx",
+      lineNumber: 7,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/jokes.tsx",
+    lineNumber: 5,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/jokes/index.tsx
+var jokes_exports2 = {};
+__export(jokes_exports2, {
+  default: () => JokesIndexRoute
+});
+var import_jsx_dev_runtime5 = require("react/jsx-dev-runtime");
+function JokesIndexRoute() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "Here's a random joke:" }, void 0, !1, {
+      fileName: "app/routes/jokes/index.tsx",
+      lineNumber: 4,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime5.jsxDEV)("p", { children: "I was wondering why the frisbee was getting bigger, then it hit me." }, void 0, !1, {
+      fileName: "app/routes/jokes/index.tsx",
+      lineNumber: 5,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/jokes/index.tsx",
+    lineNumber: 3,
+    columnNumber: 5
+  }, this);
+}
+
+// app/routes/jokes/new.tsx
+var new_exports = {};
+__export(new_exports, {
+  default: () => NewJokeRoute
+});
+var import_jsx_dev_runtime6 = require("react/jsx-dev-runtime");
+function NewJokeRoute() {
+  return /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { children: [
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("p", { children: "Add your own hilarious joke" }, void 0, !1, {
+      fileName: "app/routes/jokes/new.tsx",
+      lineNumber: 4,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("form", { method: "post", children: [
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("label", { children: [
+        "Name: ",
+        /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("input", { type: "text", name: "name" }, void 0, !1, {
+          fileName: "app/routes/jokes/new.tsx",
+          lineNumber: 8,
+          columnNumber: 19
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/jokes/new.tsx",
+        lineNumber: 7,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/jokes/new.tsx",
+        lineNumber: 6,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("label", { children: [
+        "Content: ",
+        /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("textarea", { name: "content" }, void 0, !1, {
+          fileName: "app/routes/jokes/new.tsx",
+          lineNumber: 13,
+          columnNumber: 22
+        }, this)
+      ] }, void 0, !0, {
+        fileName: "app/routes/jokes/new.tsx",
+        lineNumber: 12,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/jokes/new.tsx",
+        lineNumber: 11,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("div", { children: /* @__PURE__ */ (0, import_jsx_dev_runtime6.jsxDEV)("button", { type: "submit", className: "button", children: "Add" }, void 0, !1, {
+        fileName: "app/routes/jokes/new.tsx",
+        lineNumber: 17,
+        columnNumber: 11
+      }, this) }, void 0, !1, {
+        fileName: "app/routes/jokes/new.tsx",
+        lineNumber: 16,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, !0, {
+      fileName: "app/routes/jokes/new.tsx",
+      lineNumber: 5,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, !0, {
+    fileName: "app/routes/jokes/new.tsx",
+    lineNumber: 3,
+    columnNumber: 5
+  }, this);
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "0385e313", entry: { module: "/build/entry.client-R7ZW7K2A.js", imports: ["/build/_shared/chunk-7JOUVRXH.js", "/build/_shared/chunk-SFIXD4SY.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-4D3MW2Z7.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-B7VABIVV.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, url: "/build/manifest-0385E313.js" };
+var assets_manifest_default = { version: "06bac9e6", entry: { module: "/build/entry.client-XAGY55HT.js", imports: ["/build/_shared/chunk-BZSTLQW4.js", "/build/_shared/chunk-EETRBLDB.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-JU5J3VSM.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-2XVKNKTC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes": { id: "routes/jokes", parentId: "root", path: "jokes", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes-JW5JRNCC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/index": { id: "routes/jokes/index", parentId: "routes/jokes", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/jokes/index-NKKQOIFC.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/jokes/new": { id: "routes/jokes/new", parentId: "routes/jokes", path: "new", index: void 0, caseSensitive: void 0, module: "/build/routes/jokes/new-5SZUUFWH.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, cssBundleHref: void 0, url: "/build/manifest-06BAC9E6.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public\\build", future = { unstable_cssModules: !1, unstable_cssSideEffectImports: !1, unstable_vanillaExtract: !1, v2_errorBoundary: !1, v2_meta: !1, v2_routeConvention: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {
@@ -178,6 +309,30 @@ var assetsBuildDirectory = "public\\build", future = { unstable_cssModules: !1, 
     index: !0,
     caseSensitive: void 0,
     module: routes_exports
+  },
+  "routes/jokes": {
+    id: "routes/jokes",
+    parentId: "root",
+    path: "jokes",
+    index: void 0,
+    caseSensitive: void 0,
+    module: jokes_exports
+  },
+  "routes/jokes/index": {
+    id: "routes/jokes/index",
+    parentId: "routes/jokes",
+    path: void 0,
+    index: !0,
+    caseSensitive: void 0,
+    module: jokes_exports2
+  },
+  "routes/jokes/new": {
+    id: "routes/jokes/new",
+    parentId: "routes/jokes",
+    path: "new",
+    index: void 0,
+    caseSensitive: void 0,
+    module: new_exports
   }
 };
 // Annotate the CommonJS export names for ESM import in node:
@@ -189,3 +344,4 @@ var assetsBuildDirectory = "public\\build", future = { unstable_cssModules: !1, 
   publicPath,
   routes
 });
+//# sourceMappingURL=index.js.map

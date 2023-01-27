@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/jokes/new.tsx"],
+  "sourcesContent": ["export default function NewJokeRoute() {\r\n  return (\r\n    <div>\r\n      <p>Add your own hilarious joke</p>\r\n      <form method=\"post\">\r\n        <div>\r\n          <label>\r\n            Name: <input type=\"text\" name=\"name\" />\r\n          </label>\r\n        </div>\r\n        <div>\r\n          <label>\r\n            Content: <textarea name=\"content\" />\r\n          </label>\r\n        </div>\r\n        <div>\r\n          <button type=\"submit\" className=\"button\">\r\n            Add\r\n          </button>\r\n        </div>\r\n      </form>\r\n    </div>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;AAGM;AAHS,SAAR,eAAgC;AACrC,SACE,mDAAC,SACC;AAAA,uDAAC,OAAE,2CAAH;AAAA;AAAA;AAAA;AAAA,WAA8B;AAAA,IAC9B,mDAAC,UAAK,QAAO,QACX;AAAA,yDAAC,SACC,6DAAC,WAAM;AAAA;AAAA,QACC,mDAAC,WAAM,MAAK,QAAO,MAAK,UAAxB;AAAA;AAAA;AAAA;AAAA,eAA+B;AAAA,WADvC;AAAA;AAAA;AAAA;AAAA,aAEA,KAHF;AAAA;AAAA;AAAA;AAAA,aAIA;AAAA,MACA,mDAAC,SACC,6DAAC,WAAM;AAAA;AAAA,QACI,mDAAC,cAAS,MAAK,aAAf;AAAA;AAAA;AAAA;AAAA,eAAyB;AAAA,WADpC;AAAA;AAAA;AAAA;AAAA,aAEA,KAHF;AAAA;AAAA;AAAA;AAAA,aAIA;AAAA,MACA,mDAAC,SACC,6DAAC,YAAO,MAAK,UAAS,WAAU,UAAS,mBAAzC;AAAA;AAAA;AAAA;AAAA,aAEA,KAHF;AAAA;AAAA;AAAA;AAAA,aAIA;AAAA,SAfF;AAAA;AAAA;AAAA;AAAA,WAgBA;AAAA,OAlBF;AAAA;AAAA;AAAA;AAAA,SAmBA;AAEJ;",
+  "names": []
+}
