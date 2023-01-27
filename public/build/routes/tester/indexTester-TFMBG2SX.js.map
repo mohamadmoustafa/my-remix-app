@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/tester/indexTester.tsx"],
+  "sourcesContent": ["export default function JokesIndexRoute() {\r\n  return (\r\n    <div>\r\n      <p>Test Working</p>\r\n    </div>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;AAGM;AAHS,SAAR,kBAAmC;AACxC,SACE,mDAAC,SACC,6DAAC,OAAE,4BAAH;AAAA;AAAA;AAAA;AAAA,SAAe,KADjB;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

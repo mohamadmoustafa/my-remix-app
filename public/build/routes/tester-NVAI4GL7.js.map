@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app/routes/tester.tsx"],
+  "sourcesContent": ["import { Outlet } from \"@remix-run/react\";\r\n\r\nexport default function JokesRoute() {\r\n  return (\r\n    <div>\r\n      <h1>Test</h1>\r\n      <main>\r\n        <Outlet />\r\n      </main>\r\n    </div>\r\n  );\r\n}\r\n"],
+  "mappings": ";;;;;;;;;AAKM;AAHS,SAAR,aAA8B;AACnC,SACE,mDAAC,SACC;AAAA,uDAAC,QAAG,oBAAJ;AAAA;AAAA;AAAA;AAAA,WAAQ;AAAA,IACR,mDAAC,UACC,6DAAC,YAAD;AAAA;AAAA;AAAA;AAAA,WAAQ,KADV;AAAA;AAAA;AAAA;AAAA,WAEA;AAAA,OAJF;AAAA;AAAA;AAAA;AAAA,SAKA;AAEJ;",
+  "names": []
+}
