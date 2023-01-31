@@ -1,55 +1,73 @@
-import type { LinksFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
-import React, { useTransition } from "react";
-import { Card, Form, Table } from "react-bootstrap";
-import CardHeader from "react-bootstrap/esm/CardHeader";
-
+import { json, LinksFunction } from "@remix-run/node";
+import { Link, Outlet, useLoaderData } from "@remix-run/react";
+import { Client } from "~/generatedCode/todoApi";
 import stylesUrl from "~/styles/index.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
 };
 
-export default function IndexRoute() {
-  // const transition = useTransition();
+let _stripe: Client;
+async function getStripe() {
+  if (!_stripe) {
+    _stripe = new Client("https://localhost:7166");
+  }
+  return _stripe;
+}
 
-  // const text =
-  //   transition.state === "submitting"
-  //     ? "Saving..."
-  //     : transition.state === "loading"
-  //     ? "Saved!"
-  //     : "Go";
+export async function getTodos() {
+  const stripe = await getStripe();
+  console.log(stripe);
+  return json(stripe.usersAll());
+}
+
+// let client: Client | null;
+
+// try {
+//   client = new Client("https://localhost:7166");
+// } catch (error) {
+//   console.error(error);
+//   client = null;
+// }
+
+// export const loader = async () => {
+//   if (!client) {
+//     return json({
+//       error: "Error connecting to database",
+//     });
+//   }
+//   return json({
+//     jokeListItems: await client.usersAll(),
+//   });
+// };
+
+// const client = new Client("https://localhost:7166");
+
+// export async function loader() {
+//   return json(await client.usersAll());
+// }
+
+export default function IndexRoute() {
+  const data = await useLoaderData<typeof getTodos>();
+
   return (
-    <React.Fragment>
-      <Card className="mb-3">
-        <Card.Body>
-          <Table>
-            <thead>
-              <tr>
-                <th>header</th>
-                <th>header</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>row</th>
-                <th>row</th>
-              </tr>
-            </tbody>
-          </Table>
-          <Link to="/jokes">Jokes</Link>
-        </Card.Body>
-      </Card>
-    </React.Fragment>
-    // <Form method="post" action="/events">
-    //   <legend>Form</legend>
-    //   <label>Name</label>
-    //   <input type="text" />
-    //   <label>Description</label>
-    //   <input type="text" />
-    //   <nav>
-    //     <Link to="/jokes">Jokes</Link>
-    //   </nav>
-    // </Form>
+    <main className="jokes-main">
+      <div className="container">
+        <div className="jokes-list">
+          <p>Users</p>
+          <ul>
+            {data.map((item) => (
+              <li key={item.id}></li>
+            ))}
+          </ul>
+          <Link to="jokes/new" className="button">
+            Add your own joke
+          </Link>
+        </div>
+        <div className="jokes-outlet">
+          <Outlet />
+        </div>
+      </div>
+    </main>
   );
 }
